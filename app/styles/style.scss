@@ -1,9 +1,10 @@
+$fz: 16px;
 body {
     font-family: 'Roboto', 'Gotham Pro', sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: $fz;
     font-weight: 400;
     font-style: normal;
     color: #000;
@@ -22,9 +23,11 @@ a {
     text-decoration: none;
 }
 .wrapper{
-    position: absolute;
+    position: relative;
     padding-top: 124px;
-    // border: 2px solid yellow;
+    width: 100%;
+    height: 500px;
+    border: 2px solid yellow;
 
 }
 header {
@@ -35,13 +38,11 @@ header {
     left: 0;
     width: 100%;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.12);
-    // border: 4px solid red;
     height: 123px;
 }
 .header__container {
     width: 1320px;
     margin-left: auto;
-    // border: 2px solid blue;
     margin-right: auto;
     width: 1320px;
     height: 123px;
@@ -49,14 +50,11 @@ header {
 .header__container-inner {
     padding-left: 10px;
     padding-right: 10px;
-    // border: 2px solid tomato;
     width: 1300px;
     height: 123px;
 }
 header .header__top {
-    // border-bottom: 1px solid #e7e7e7;
     padding: 14px 0;
-    // align-items: center;
 }
 .flex {
     display: flex;
@@ -70,73 +68,48 @@ header .header__top {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 200px;
+    height: 40px;
     & p {
     padding: 0;
     margin: 0; 
     }
-    font-size: 12px;
+    font-size: $fz;
     margin-left: 57px;
-    // border: 1px solid orange;
+    // border: 2px solid orange;
 }
 .header__working-hours {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    width: 280px;
+    height: 40px;
+    font-size: $fz;
     padding-left: 23px;
+    // border: 2px solid red;
 }
-@media (max-width: 830px){
-    .header__working-hours{
-        display: none;
-    } 
-}
+
 .header__phone-number {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 150px;
+    height: 40px;
     font-weight: 700;
-    font-size: 16px;
-    margin-left: 250px;
+    font-size: $fz;
+    margin-left: 150px;
     padding-left: 25px;
+    // border: 2px solid red;
+
 }
-@media (max-width: 1280px){
-    .header__phone-number{
-    margin-left: 100px;
-    } 
-}
-@media (max-width: 1130px){
-    .header__phone-number{
-    margin-left: 50px;
-    }
-    .header__btn-callback{
-        & .btn__callback{
-        display: none;
-        }
-        display: none;
-    }
-}
-@media (max-width: 588px){
-    .header__phone-number{
-        position: absolute;
-        top: 80px;
-        left: 40px;
-    }
-    .header__address{
-        position: absolute;
-        margin-left: 180px;
-        font-size: 20px;
-    }
-    .header__logotype{
-        position: absolute;
-        right: 30px;
-    }
-}
+
 .header__btn-callback {
     display: flex;
     width: 200px;
     border-radius: 10px;
     & .btn__callback{
     width: 100%;
+    font-size: $fz;
     cursor: pointer;
     background: none;
     border-style: none;
@@ -148,18 +121,155 @@ header .header__top {
     }
     }
     margin-left: 63px;
+    
 }
 .header__logotype {
     position: relative;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
     & a {
     color: tomato;
     font-size: 25px;
     font-weight: 700;
 }
-    // border: 1px solid #000;
+    border: 3px solid #000;
+    border-radius: 15px;
     text-align: center;
+}
+.header__bottom {
+border-top: 4px solid white;
+& .header__main-menu{
+    width: 100%;
+    & .header__menu-elem{
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        list-style: none;  
+        & li{
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: 2px solid rgb(36, 189, 22);  
+        }
+        li:hover {
+            cursor: pointer;
+            color: red;
+        }
+
+    }
+}
+}
+
+
+// медиазапросы___________________________________________________
+
+@media (max-width: 1280px){
+    .header__phone-number{
+    margin-left: 100px;
+    } 
+}
+@media (max-width: 1130px){
+    .header__address{
+        margin-left: 100px;
+        font-size: 16px;
+    }
+    .header__phone-number{
+    margin-left: 50px;
+    }
+    .header__working-hours{
+        margin-left: 100px;
+        font-size: 16px;
+    } 
+    .header__btn-callback{
+        position: absolute, static;
+        margin-left: -80px;
+        width: 80px;
+        height: 80px;
+        margin-top: 35%;
+        & .btn__callback{
+            width: 100px;
+            border-radius: 50%;
+            width: 100%;
+            cursor: pointer;
+            background: none;
+            border-style: none;
+            border-radius: 50%;
+            border: 3px solid orange;
+        
+        }
+    }
+}
+@media (max-width: 830px){
+    .flex{
+        display: flex;
+        width: 810px;
+        // flex-direction: column;
+        height: 180px;
+    } 
+    .header__logotype{
+        margin-left: 20px;
+        
+    }
+    .header__address{
+        margin-left: 0px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .header__working-hours{
+        margin-left: 0px;
+        margin-bottom: 10px;
+        padding: 0;
+    } 
+    .header__phone-number{
+        margin: 0;
+        }
+    .header__btn-callback{
+        position: absolute, static;
+        margin-left: 85%;
+        width: 80px;
+        height: 80px;
+        margin-top: 48%;
+    }
+    
+}
+@media (max-width: 590px){
+    .flex{
+        display: flex;
+        // flex-direction: column;
+        width: 810px;
+        height: 180px;
+    } 
+    .header__logotype{
+        margin-left: 10px;
+        
+        
+    }
+    .header__address{
+        width: 120px;
+        margin-left: 0px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .header__working-hours{
+        width: 200px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        padding: 0;
+        font-size: 12px;
+        // margin-left: -150px;
+    } 
+    .header__phone-number{
+        // margin-left: -150px;
+        }
+    .header__btn-callback{
+        position: absolute, static;
+        width: 80px;
+        height: 80px;
+        margin-top: 60%;
+        margin-left: -85%;
+    }
 }
