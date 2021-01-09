@@ -7,11 +7,11 @@ body {
     line-height: $fz;
     font-weight: 400;
     font-style: normal;
-    color: #000;
     min-width: 768px;
     overflow-x: hidden;
     display: block;
     box-sizing: border-box;
+    background:white;
 }
 p {
     margin: 0;
@@ -32,12 +32,12 @@ a {
 }
 header {
     display: block;
-    background-color: rgba(212, 206, 206, 0.616);
+    background: rgb(153, 151, 151);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.12);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
     height: 123px;
 }
 .header__container {
@@ -152,8 +152,7 @@ border-top: 4px solid white;
         margin-top: 15px;
         font-size: 18px;
         font-weight: 600;
-        text-transform: uppercase;
-        border: 2px solid rgb(36, 189, 22);  
+        text-transform: uppercase; 
         }
         li:hover {
             cursor: pointer;
@@ -162,6 +161,66 @@ border-top: 4px solid white;
 
     }
 }
+}
+.bgd__image{
+    
+    width: 100%;
+& img {
+    width: 100%;
+    opacity: 0.2;
+}
+}
+
+.block-inner{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    // border: 3px solid rgb(146, 15, 15);
+& h2{
+    margin-top: 15px;
+    padding: 0;
+}
+}
+.block__content{
+    display: flex;
+    // border: 2px solid blue;
+    & ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0;
+        & li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 325px;
+            height: 116px;
+            margin-bottom: 16px;
+            border: 3px solid rgba(126, 129, 126, 0.247);
+            border-radius: 15px 0 15px 0;
+            border-right: 3px solid steelblue;
+            & img {
+                width: 48px;
+                height: 48px;
+                opacity: 1;
+            }
+            & a{
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                font-weight:700;
+                margin-top: 15px;
+                &:hover{
+                    color: tomato;
+                }
+            }
+        }
+    }
 }
 
 
@@ -262,9 +321,7 @@ border-top: 4px solid white;
         font-size: 12px;
         // margin-left: -150px;
     } 
-    .header__phone-number{
-        // margin-left: -150px;
-        }
+    
     .header__btn-callback{
         position: absolute, static;
         width: 80px;
