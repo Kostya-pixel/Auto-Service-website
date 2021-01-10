@@ -22,49 +22,51 @@ a {
     padding: 0;
     text-decoration: none;
 }
-.wrapper{
-    position: relative;
-    padding-top: 124px;
+.wrapper{ 
+    position: absolute;
+    box-sizing: content-box;
+    // padding-top: 124px;
     width: 100%;
-    height: 500px;
-    border: 2px solid yellow;
+    height: 2000px;
+    border: 6px solid rgb(240, 1, 1);
+    background-color: rgb(229, 236, 229);
+    // background-image: url(https://i.pinimg.com/originals/30/bd/56/30bd5660a47b6be96e4cbdf153c711ce.jpg);
+    
 
-}
-header {
+ header {
     display: block;
-    background: rgb(153, 151, 151);
-    position: fixed;
+    background-color: rgb(153, 151, 151);
+    // position: relative;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
-    height: 123px;
-}
-.header__container {
+ }
+ .header__container {
     width: 1320px;
     margin-left: auto;
     margin-right: auto;
     width: 1320px;
     height: 123px;
-}
-.header__container-inner {
+ }
+ .header__container-inner {
     padding-left: 10px;
     padding-right: 10px;
     width: 1300px;
     height: 123px;
-}
-header .header__top {
+ }
+ header .header__top {
     padding: 14px 0;
-}
-.flex {
+ }
+ .flex {
     display: flex;
     flex-wrap: wrap;
     width: 1300px;
     height: 44px;
     // border: 2px solid palevioletred;
 
-}
-.header__address {
+ }
+ .header__address {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,8 +79,8 @@ header .header__top {
     font-size: $fz;
     margin-left: 57px;
     // border: 2px solid orange;
-}
-.header__working-hours {
+ }
+ .header__working-hours {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,9 +89,9 @@ header .header__top {
     font-size: $fz;
     padding-left: 23px;
     // border: 2px solid red;
-}
+ }
 
-.header__phone-number {
+ .header__phone-number {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,9 +103,9 @@ header .header__top {
     padding-left: 25px;
     // border: 2px solid red;
 
-}
+ }
 
-.header__btn-callback {
+ .header__btn-callback {
     display: flex;
     width: 200px;
     border-radius: 10px;
@@ -122,8 +124,8 @@ header .header__top {
     }
     margin-left: 63px;
     
-}
-.header__logotype {
+ }
+ .header__logotype {
     position: relative;
     display: flex;
     align-items: center;
@@ -134,14 +136,14 @@ header .header__top {
     color: tomato;
     font-size: 25px;
     font-weight: 700;
-}
+ }
     border: 3px solid #000;
     border-radius: 15px;
     text-align: center;
-}
-.header__bottom {
-border-top: 4px solid white;
-& .header__main-menu{
+ }
+ .header__bottom {
+ border-top: 4px solid white;
+ & .header__main-menu{
     width: 100%;
     & .header__menu-elem{
         display: flex;
@@ -160,33 +162,63 @@ border-top: 4px solid white;
         }
 
     }
-}
-}
-.bgd__image{
-    
-    width: 100%;
-& img {
-    width: 100%;
-    opacity: 0.2;
-}
-}
+ }
+ }
 
-.block-inner{
+ .block-inner{
     position: absolute;
     box-sizing: border-box;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
    align-items: center;
-    // border: 3px solid rgb(146, 15, 15);
-& h2{
+    // border: 3px solid rgb(48, 38, 38);
+ & h2{
     margin-top: 15px;
     padding: 0;
-}
-}
-.block__content{
+ }
+  .block__price{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    width: 80%;
+    height: 900px;
+    // border: 3px solid rgb(18, 204, 34);
+    background-color: white;
+  }
+  .block__price-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    // border: 3px solid rgb(192, 204, 18);
+  }
+  .item__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    height: 90px;
+    width: 100%;
+    border-bottom: 3px solid rgb(192, 188, 190);
+    & .title{
+        max-width: 640px;
+        padding-left: 10px;
+        font-weight: 500;
+    }
+    & .price {
+        font-weight: 500;
+        padding-right: 10px;
+    }
+  }
+ }
+ .block__content{
     display: flex;
     // border: 2px solid blue;
+    background-color: white;
     & ul{
         display: flex;
         list-style: none;
@@ -204,6 +236,11 @@ border-top: 4px solid white;
             border: 3px solid rgba(126, 129, 126, 0.247);
             border-radius: 15px 0 15px 0;
             border-right: 3px solid steelblue;
+            cursor: pointer;
+            &:hover{
+                border-left: 3px solid steelblue;
+                border-radius: 0 15px 0 15px;
+            }
             & img {
                 width: 48px;
                 height: 48px;
@@ -221,8 +258,8 @@ border-top: 4px solid white;
             }
         }
     }
+ }
 }
-
 
 // медиазапросы___________________________________________________
 
