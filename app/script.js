@@ -1,30 +1,43 @@
-// document.querySelector('.header__btn-callback').onclick = function () {
-// console.log('visible');
-// document.querySelector('.dialog__window').style.visibility = 'visible';
-// };
 
-// document.getElementById('2').onclick =  function () {
-// console.log('visible');
-// document.querySelector('.dialog__window').style.visibility = 'visible'; 
-// }; 
 
 let btnHeader = document.getElementById('1');
 let btnFooter = document.getElementById('2');
 let cancelDialogWindow = document.querySelector('.block-inner');
+let closeDialog = document.querySelector('.cancel');
+let btnDiagnost = document.querySelector('.btn__diagnostics');
 
-// btnHeader.onclick = function f1() {
-// console.log('visible');
-// document.querySelector('.dialog__window').style.visibility = 'visible';
-// };
-//     cancelDialogWindow.onclick = function f1() {
-// console.log('closed');
-// document.querySelector('.dialog__window').style.visibility = 'hidden'; 
-// }
-btnFooter.onclick =  function f2() {
+closeDialog.onclick = function () {
+document.querySelector('.dialog__window').style.visibility = 'hidden';
+}
+
+btnHeader.onclick =  function f1() {
 console.log('visible');
-document.querySelector('.dialog__window').style.display = 'none'; 
-}; 
-cancelDialogWindow.onclick = function f3() {
+document.querySelector('.dialog__window').style.visibility = 'visible'; 
+}
+
+cancelDialogWindow.onclick = function f2() {
 console.log('closed');
-document.querySelector('.dialog__window').style.display = 'block';
+document.querySelector('.dialog__window').style.visibility = 'hidden';
+}
+
+btnFooter.onclick =  function f3(event) {
+event.stopPropagation();
+console.log('visible');
+document.querySelector('.dialog__window').style.visibility = 'visible'; 
+}
+
+cancelDialogWindow.onclick = function f4() {
+console.log('closed');
+document.querySelector('.dialog__window').style.visibility = 'hidden';
+}
+
+btnDiagnost.onclick =  function f5(event) {
+event.stopPropagation();
+console.log('visible');
+document.querySelector('.dialog__window').style.visibility = 'visible'; 
+}
+    
+cancelDialogWindow.onclick = function f6() {
+console.log('closed');
+document.querySelector('.dialog__window').style.visibility = 'hidden';
 }

@@ -345,65 +345,80 @@ a {
   }
   .block__stock{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   //  box-sizing: border-box;s
     width: 80%;
+    height: 100%;
+    padding: 10px;
     background: rgb(255, 255, 255);
     margin-top: 10px;
     border-top: 4px solid  rgb(192, 188, 190);
+    border: 3px solid red;
   }
+.stock__title{
+   display: inline;
+   
+   flex-wrap: wrap;
+   border: 3px solid red;
 
+}
   .block__content-stock{
     display: flex;
-    flex-wrap: wrap;
+   //  flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+   //  align-items: center;
+    border: 3px solid rgb(160, 45, 112);
+   //  height: 50%;
+    box-sizing: content-box;
     & .block__content-img{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 5px;
+   //  width: 100%;
+   //  height: 100%;
+    border: 3px solid rgb(56, 19, 41);
+    & a {
+      display: flex;
+      flex-wrap: wrap;
+    }
     & img {
-    width: 100%;
-    height: 100%;
-    border-top: 4px solid  rgb(192, 188, 190);
-    padding-top: 5px;
-    
+      //  width: 100%;
+      //  height: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 3px solid rgb(9, 131, 49);
+
     &:hover{
-    border-top: 6px solid steelblue;
+    border-top: 3px solid steelblue;
     padding-top: 2px;
     }
     }
     }
   }
-  .stock__title-flex{
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    & .stock__title{
-    width: 407px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    padding: 20px 25px 15px;
-    } 
-  }
+  
   .stock__links{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    & a{
     box-sizing: border-box;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
     color: #000;
+    margin-top: 10px;
     &:hover{
     color: rgb(253, 6, 6);
     border-top: 1px solid rgb(253, 7, 7);
-    }
+    
     }
   }
-
+  .center-link {
+     margin-top: 25px;
+  }
  }
  
  .block__content{
@@ -446,13 +461,12 @@ a {
     &:hover{
     color: tomato;
     }
-    }
-    }
-    }
+   }
+   }
+  }
  }
  .footer__block-flex{
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10px;
@@ -462,37 +476,42 @@ a {
     width: 80%;
     height: 100%;
     margin-bottom: 50px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
+    border: 2px solid red;
+
     & .footer__contacts{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
-        margin: 5px;
-        justify-content: space-around;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      margin: 5px;
+      justify-content: space-around;
+      border: 2px solid rgb(76, 0, 255);
     
     & .footer__address, .footer__working-hours,
     .footer__phone-number {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
- }
-  }  
+      display: flex;
+      flex-wrap: wrap;
+      // align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px;
+      height: 90%;
+      border: 2px solid rgb(0, 255, 42);
+      
+     }
+   }
+ }  
 }
-
 
 .footer__btn-diagnostics{
     display: flex;
     width: 400px;
     height: 60px;
-    border-radius: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
     & .btn__diagnostics{
     width: 100%;
     font-size: 18px;
@@ -520,19 +539,3 @@ a {
    visibility: hidden
 } 
 }
-// @media (max-width: 320px){
-//    .dialog__window{ 
-//       width: 310px;
-//       height: 65%;
-//     }
-   //  .input {
-   //    margin: 20px 0 ;
-   //    width: 80%;
-   //    height: 30px;
-   // }
-   // .input__submit {
-   //   width: 80%;
-   //   height: 30px;
-   //   margin-top: 15px;
-   // }
-// }
