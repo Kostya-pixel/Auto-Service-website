@@ -105,9 +105,9 @@ a {
     display: flex;
     width: 200px;
     border-radius: 10px;
+    z-index: 99;
  & .btn__callback{
     font-weight: 700;
-    background: white; 
     color: purple;
     width: 100%;
     font-size: $fz;
@@ -181,16 +181,134 @@ a {
     flex-direction: column;
     align-items: center;
     background-color: rgb(229, 236, 229);
+    border: 3px solid red;
  & h2{
     margin-top: 15px;
     padding: 0;
+ }
+ .dialog__window{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: fixed;
+   box-sizing: border-box;
+   width: 20%;
+   height: 50%;
+   border: 3px solid red;
+   background-color: rgb(138, 141, 138);
+   border-radius: 10px;
+   visibility: hidden;
+ }
+
+
+//  _____________медиа запросы диалогового окна______
+
+@media (max-width: 280px){
+   .dialog__window{ 
+      width: 90%;
+      height: 50%;
+    }
+   }
+ @media (max-width: 320px){
+   .dialog__window{ 
+      width: 90%;
+      height: 60%;
+    }
+   }
+ @media (max-width: 360px){
+   .dialog__window{ 
+      width: 90%;
+      height: 70%;
+    }
+   }
+ @media (max-width: 411px){
+   .dialog__window{ 
+      width: 90%;
+      height: 50%;
+    }
+   }
+ @media (max-width: 414px){
+   .dialog__window{ 
+      width: 90%;
+      height: 50%;
+    }
+   }
+ @media (max-width: 540px){
+   .dialog__window{
+   & .input {
+      margin: 10px 0;
+      height: 25px;
+   } 
+      width: 70%;
+      height: 50%;
+    }
+   }
+ @media (max-width: 670px){ 
+   .dialog__window{ 
+      width: 70%;
+      height: 30%;
+      }    
+   }
+ @media (max-width: 768px){ 
+   .dialog__window{ 
+      width: 60%;
+      height: 30%;
+    }    
+   }
+ @media (max-width: 1024px){
+   .dialog__window{ 
+      width: 70%;
+      height: 40%;
+    }
+   }
+
+
+ .input {
+    margin: 20px 0 ;
+    width: 80%;
+    height: 30px;
+ }
+ .input__submit {
+   width: 80%;
+   height: 30px;
+   margin-top: 10px;
+   margin-bottom: 15px;
+   font-weight: 700;
+    background: white; 
+    color: purple;
+    font-size: $fz;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 3px solid orange;
+ &:hover{
+    background: pink; 
+    color: black;
+    border: 3px solid rgb(252, 251, 250);
+ }
+ }
+ .cancel{
+   font-weight: 700;
+    background: white; 
+    color: purple;
+    width: 50%;
+    font-size: $fz;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 3px solid orange;
+    margin-bottom: 10px;
+ &:hover{
+    background: pink; 
+    color: black;
+    border: 3px solid rgb(252, 251, 250);
+ }
  }
   .block__price{
     display: flex;
     justify-content: center;
     margin-top: 15px;
     width: 80%;
-    height: 900px;
+    min-height: 900px;
+    height: 100%;
     background-color: white;
   }
   .block__price-content{
@@ -207,6 +325,7 @@ a {
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
+    min-height: 90px;
     height: 100%;
     width: 100%;
     border-bottom: 3px solid rgb(192, 188, 190);
@@ -234,6 +353,7 @@ a {
     margin-top: 10px;
     border-top: 4px solid  rgb(192, 188, 190);
   }
+
   .block__content-stock{
     display: flex;
     flex-wrap: wrap;
@@ -253,6 +373,7 @@ a {
     }
   }
   .stock__title-flex{
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -362,9 +483,10 @@ a {
     margin-bottom: 10px;
   }
  }
-  }
-  
+  }  
 }
+
+
 .footer__btn-diagnostics{
     display: flex;
     width: 400px;
@@ -393,8 +515,24 @@ a {
 // медиазапросы___________________________________________________
 
 @media (max-width: 390px){
-    .stock__links{
-        display: none;
-        visibility: hidden
-    } 
+.stock__links{
+   display: none;
+   visibility: hidden
+} 
 }
+// @media (max-width: 320px){
+//    .dialog__window{ 
+//       width: 310px;
+//       height: 65%;
+//     }
+   //  .input {
+   //    margin: 20px 0 ;
+   //    width: 80%;
+   //    height: 30px;
+   // }
+   // .input__submit {
+   //   width: 80%;
+   //   height: 30px;
+   //   margin-top: 15px;
+   // }
+// }
