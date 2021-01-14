@@ -44,14 +44,25 @@
           </div>
           <div class="header__bottom flex">
             <div class="header__main-menu">
-              <ul class="header__menu-elem">
-                <li>Кузовной ремонт</li>
-                <li>Мойка</li>
-                <li>О нас</li>
-                <li>Акции</li>
-                <li>Контакты</li>
-                <li>Прайс</li>
-              </ul>
+              <nav class="header__menu-elem">
+                <ul>
+                  <li><a href="#">Кузовной ремонт</a>
+                  <ul class="hidden_nav">
+                    <li><a href="#">Рихтовка кузова</a></li>
+                    <li><a href="#">Замена элементов</a></li>
+                    <li><a href="#">Сварочные работы</a></li>
+                    <li><a href="#">Обработка</a></li>
+                  </ul>
+                  </li>
+
+                  <li><a href="#">Мойка</a></li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Акции</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Прайс</a></li>
+                </ul>
+                
+              </nav>
             </div>
           </div>
         </div>
@@ -124,52 +135,44 @@
           </div>
         </div>
 
+        <h3>Акции</h3>
+
         <div class="block__stock">
           <div class="block__wrapp">
 
-          
-          <!-- <h3>Акции</h3> -->
           <div class="block__content-stock">
-            <!-- <div class="block__content-img"> -->
+            <div class="block__content-img">
                 <img src="https://carfast.express/storage/418402/eksperti_kak_vigodno_avtoizUSA0.jpg" alt="подбор + пригон =300">
-            <!-- </div> -->
             <div class="stock__title">
                 До конца июня подбор + пригон автомобиля 300$
             </div>
                 <a class="stock__links" href="#">Подробнее</a>
+              </div>
+            
           </div>
             
-                <div class="block__content-stock">
-            <!-- <div class="block__content-img"> -->
+          <div class="block__content-stock">
+              <div class="block__content-img">
                 <img src="https://st3.depositphotos.com/12985656/18990/i/600/depositphotos_189908468-stock-photo-partial-view-man-putting-coin.jpg" alt="х2">
-            <!-- </div> -->
-                <div class="stock__title">Бонусы Х 2</div>
+              <div class="stock__title">Бонусы Х 2</div>
                 <a class="stock__links center-link" href="#">Подробнее</a>
-                </div>
-
-                <div class="block__content-stock">
-            <!-- <div class="block__content-img"> -->
-                <img src="https://autocomp.com.ua/sites/default/files/styles/407x358/public/field/image/2020-02-20.jpg?itok=oixUrvpQ" alt="free">
-            <!-- </div> -->
-                <div class="stock__title">При установке сигнализации комплексная мойка бесплатно</div>
-                <a class="stock__links" href="#">Подробнее</a>
-                </div>
               </div>
+                
+          </div>
+
+          <div class="block__content-stock">
+                <div class="block__content-img">
+                  <img src="https://autocomp.com.ua/sites/default/files/styles/407x358/public/field/image/2020-02-20.jpg?itok=oixUrvpQ" alt="free">
+                <div class="stock__title">При установке сигнализации комплексная мойка бесплатно</div>
+                  <a class="stock__links" href="#">Подробнее</a>
+                </div>
+                
+            </div>
+          </div>
         </div>   
-      
-
-
-
-
-
-
-
-
-
-
+       
             
-            
-            <footer class="footer__block-flex">
+        <footer class="footer__block-flex">
         <div class="footer__btn-diagnostics">
           <button class="btn__diagnostics">Записаться на диагностику</button>
         </div>
@@ -198,13 +201,8 @@
         </div>
         </footer>
       </div>
-        </div>
-      
-        
-
-    
   </div>
-
+      
 <script src="script.js"></script>
 </body>
 </html>

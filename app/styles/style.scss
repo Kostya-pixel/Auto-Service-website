@@ -146,33 +146,90 @@ a {
     flex-wrap: wrap;
     border-top: 4px solid white;
     height: 100%;
- & .header__main-menu{
-     width: 100%;
+ }
+ .header__main-menu{
+   width: 100%;
+   display: flex;
+   justify-content: center;
 
- & .header__menu-elem{
+ }
+ .header__menu-elem{
+   width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0;
-    padding: 5px;
+    padding: 0;
     list-style: none;  
-
- & li{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
+ }
+ ul{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 0;
+   width: 100%;
+   border-radius: 10px;
+ }
+ li{
+   text-align: center;
+   height: 40px;
+ a{
+   margin: 0;
+   padding: 0;
+   color: black;
+   font-weight: 700;
+   font-size: 20px;
+   &:hover{
+   color: red;
+   }
+   }
+ }
+ nav ul {
+    list-style: none;
+    & li{
+    float: left;
     }
- li:hover {
-    cursor: pointer;
+ }
+ nav ul::after{
+    content: "";
+    display: block;
+    clear: both;
+ }
+ nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+ }
+ nav ul ul {
+    display: none;
+    position: absolute;
+ }
+ nav ul li:hover ul{
+    display: block;
+    z-index: 999;
+ }
+    }
+ ul .hidden_nav{
+    display: flex;
+    padding: 0;
+    width: 230px;
+    background: rgb(199, 197, 197);
+    & li{
+    width: 100%;
+    border-bottom: 2px solid white;
+    }
+      
+    }
+    .hidden_nav li a{
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    a:hover{
     color: red;
     }
-
     }
- }
- }
-
+ 
  .block-inner{
     position: absolute;
     box-sizing: border-box;
@@ -181,11 +238,7 @@ a {
     flex-direction: column;
     align-items: center;
     background-color: rgb(229, 236, 229);
-    border: 3px solid red;
- & h2{
-    margin-top: 15px;
-    padding: 0;
- }
+ 
  .dialog__window{
    display: flex;
    flex-direction: column;
@@ -200,65 +253,64 @@ a {
    visibility: hidden;
  }
 
-
 //  _____________медиа запросы диалогового окна______
 
 @media (max-width: 280px){
    .dialog__window{ 
-      width: 90%;
-      height: 50%;
+    width: 90%;
+    height: 50%;
     }
    }
  @media (max-width: 320px){
    .dialog__window{ 
-      width: 90%;
-      height: 60%;
+    width: 90%;
+    height: 60%;
     }
    }
  @media (max-width: 360px){
    .dialog__window{ 
-      width: 90%;
-      height: 70%;
+    width: 90%;
+    height: 70%;
     }
    }
  @media (max-width: 411px){
    .dialog__window{ 
-      width: 90%;
-      height: 50%;
+    width: 90%;
+    height: 50%;
     }
    }
  @media (max-width: 414px){
    .dialog__window{ 
-      width: 90%;
-      height: 50%;
+    width: 90%;
+    height: 50%;
     }
    }
  @media (max-width: 540px){
    .dialog__window{
    & .input {
-      margin: 10px 0;
-      height: 25px;
+    margin: 10px 0;
+    height: 25px;
    } 
-      width: 70%;
-      height: 50%;
+    width: 70%;
+    height: 50%;
     }
    }
  @media (max-width: 670px){ 
    .dialog__window{ 
-      width: 70%;
-      height: 30%;
-      }    
+    width: 70%;
+    height: 30%;
+    }    
    }
  @media (max-width: 768px){ 
    .dialog__window{ 
-      width: 60%;
-      height: 30%;
+    width: 60%;
+    height: 30%;
     }    
    }
  @media (max-width: 1024px){
    .dialog__window{ 
-      width: 70%;
-      height: 40%;
+    width: 70%;
+    height: 40%;
     }
    }
 
@@ -269,11 +321,11 @@ a {
     height: 30px;
  }
  .input__submit {
-   width: 80%;
-   height: 30px;
-   margin-top: 10px;
-   margin-bottom: 15px;
-   font-weight: 700;
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 700;
     background: white; 
     color: purple;
     font-size: $fz;
@@ -287,7 +339,7 @@ a {
  }
  }
  .cancel{
-   font-weight: 700;
+    font-weight: 700;
     background: white; 
     color: purple;
     width: 50%;
@@ -310,6 +362,7 @@ a {
     min-height: 900px;
     height: 100%;
     background-color: white;
+    border-top: 4px solid rgb(192, 188, 190);
   }
   .block__price-content{
     display: flex;
@@ -318,6 +371,9 @@ a {
     box-sizing: border-box;
     width: 70%;
     height: 100%;
+    & h3{
+    border: none;
+    }
   }
   .item__flex{
     display: flex;
@@ -343,9 +399,20 @@ a {
     padding-right: 10px;
   }
   }
+& h3 {
+    margin: 10px 0 0 0;
+    padding: 15px 0 0 0;
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    background: white;
+    border-top: 4px solid  rgb(192, 188, 190);
+    }
+
+
   .block__stock{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
     box-sizing: border-box;
     width: 80%;
@@ -353,61 +420,75 @@ a {
     background: rgb(255, 255, 255);
     margin-top: 10px;
     border-top: 4px solid  rgb(192, 188, 190);
-    border: 3px solid red;
-    & h3 {
-    margin: 0;
-    padding: 0;
-    width: 70px;
-    height: 20px;
-    // display: inline-block;
-    border: 3px solid red;
+    
+    .block__wrapp{
+       margin: 0;
+       padding: 10px 0 0 0;
+       display: flex;
+       justify-content: space-around;
+       flex-wrap: wrap;
     }
-//   .block__wrapp{
-//       display: flex;
-//       flex-direction: column;
-//       flex-wrap: wrap;
-//     //   align-items: ;
-//     //   justify-content: space-between;
-//       border: 3px solid yellow;
-//   }
 
   .block__content-stock{
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    border: 3px solid rgb(160, 45, 112);
-    width: 36%;
-    // .block__content-img{
-    // box-sizing: border-box;
-    // width: 100%;
-    // height: 100%;
-    // border: 5px solid rgb(13, 177, 27);
+    width: 30%;
+    .block__content-img{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     img{
-    border: 3px solid rgb(245, 145, 31);
-    width: 26%;
+    width: 100%;
+    border-radius: 0 20px 0 20px;
+    &:hover{
+    border-bottom: 4px solid steelblue;
+    border-radius: 20px 0 20px 0;
     }
-    
-    // }
-    
+    }
+    }
     }
  .stock__title{
     display: inline-flex;
     justify-content: center;
     box-sizing: border-box;
-    // width: 150px;
-    // height: 20px;
-    flex-wrap: wrap;
-    border: 3px solid red;
+    margin-top: 10px;
+    font-weight: 500;
     }
+    @media (max-width: 668px){
+      .stock__title{
+         font-size: 14px;
+      }
+      .stock__links{
+         font-size: 14px;
+      }
+    }
+    @media (max-width: 520px){
+      .stock__title{
+         font-size: 10px;
+      }
+      .stock__links{
+         font-size: 10px;
+      }
+    }
+
     .stock__links{
-    border: 3px solid rgb(0, 102, 255);
+    font-weight: 500;
+    margin-top: 10px;
+    color: black;
+    &:hover{
+    color: red;
+    font-weight: 700;
+    border-bottom: 2px solid red;
+    }
     }
 }
   }
- }
+ 
  
  .block__content{
     display: flex;
@@ -466,33 +547,31 @@ a {
     margin-bottom: 50px;
     padding-top: 10px;
     padding-bottom: 20px;
-    border: 2px solid red;
 
     & .footer__contacts{
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      height: 100%;
-      margin: 5px;
-      justify-content: space-around;
-      border: 2px solid rgb(76, 0, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    padding: 5px 0  5px 0;
+    justify-content: space-around;
+    border-top: 4px solid  rgb(192, 188, 190);
     
     & .footer__address, .footer__working-hours,
     .footer__phone-number {
-      display: flex;
-      flex-wrap: wrap;
-      // align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 10px;
-      height: 90%;
-      border: 2px solid rgb(0, 255, 42);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 10px;
+    height: 90%;
       
      }
    }
  }  
-// }
+
 
 .footer__btn-diagnostics{
     display: flex;
@@ -511,9 +590,9 @@ a {
     border-radius: 10px;
     border: 3px solid orange;
     &:hover{
-        background: pink; 
-        color: black;
-        border: 3px solid rgb(17, 17, 17);
+    background: pink; 
+    color: black;
+    border: 3px solid rgb(17, 17, 17);
     }
     }
     
